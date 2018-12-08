@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const appConfig = require('./config');
 const isProduction = process.env.NODE_ENV;
@@ -14,6 +17,15 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          "css-loader"
+        ]
       }
     ]
   },
@@ -25,6 +37,15 @@ const config = {
       template: path.resolve(__dirname, 'src/index.html'),
       inject: 'body'
     }),
+    // new CopyWebpackPlugin([
+    //   { from: 'public' }
+    // ]),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
   ]
 };
 

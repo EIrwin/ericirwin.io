@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import App from './app';
+import AppComponent from './app.component';
 
 
 const Sample =  () => {
@@ -15,7 +15,7 @@ const Sample =  () => {
 const Routes = () => (
   <Router>
     <div>
-      <Route exact path="/" component={App}/>
+      <Route exact path="/" component={AppComponent}/>
       <Route path="/sample" component={Sample} />
     </div>
   </Router>

@@ -1,7 +1,8 @@
 import * as React from 'react';
+import './header.css';
 
 export default function Header() {
 	return (
-		<div>Header</div>
+		<div className="test">Header</div>
 	)
 }
