@@ -8,7 +8,7 @@
     "dev": "yarn run build:dev && yarn run serve:dev",
     "serve:build": "npm run build && node server.js",
     "serve:dev": "cross-env NODE_ENV=development node server.js",
-    "serve": "cross-env NODE_ENV=production  node server.js",
+    "serve": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production  node server.js",
     "start": "webpack-dev-server --progress --profile --colors",
     "lint": "eslint --ext js --ext js src || exit 0"
   },
@@ -20,7 +20,7 @@
   "license": "MIT",
   "homepage": "https://github.com/ReactJSResources/react-webpack-babel#readme",
   "dependencies": {
-    "babel-polyfill": "6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "normalize.css": "^7.0.0",
@@ -37,7 +37,9 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-plugin-webpack-alias": "2.1.2",
+    "babel-plugin-webpack-loaders": "^0.9.0",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "connect-history-api-fallback": "^1.5.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
