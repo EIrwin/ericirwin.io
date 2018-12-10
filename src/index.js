@@ -1,22 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {AppContainer} from 'react-hot-loader'
-import Routes from './routes'
+// @flow
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import Routes from './routes';
 
-const renderApp = (Component) => {
-  ReactDOM.render(
+function AppWrapper() {
+  return (
     <AppContainer>
-      <Component/>
-    </AppContainer>,
-    document.getElementById('app')
+      <Routes />
+    </AppContainer>
   );
-};
-
-renderApp(Routes);
-
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./routes', () => {
-    renderApp(require('./routes').default);
-  })
 }
+
+const app = document.getElementById('app');
+if (!app) throw new Error('Could not find react dom root');
+ReactDOM.render(<AppWrapper />, app);

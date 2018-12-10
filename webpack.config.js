@@ -1,11 +1,10 @@
+// @flow
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const merge = require('webpack-merge');
 
-const appConfig = require('./config');
-const isProduction = process.env.NODE_ENV;
+const isProduction = process.env.NODE_ENV === 'production';
 
 const config = {
   output: {
@@ -16,7 +15,7 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
@@ -24,42 +23,42 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          "css-loader"
-        ]
-      }
-    ]
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        loader: 'url-loader?limit=10000',
+      },
+      {
+        test: /\.(ttf|eot)(\?[\s\S]+)?$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000',
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
-      inject: 'body'
+      inject: 'body',
     }),
-    // new CopyWebpackPlugin([
-    //   { from: 'public' }
-    // ]),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
 };
 
+const envConfig = isProduction
+  ? require('./webpack.production')
+  : require('./webpack.development');
 
-if (isProduction) {
-  config.mode = 'production';
-} else {
-  config.mode = 'development';
-  config.entry = [
-    './src/index.js',
-    'react-hot-loader/patch',
-    `webpack-dev-server/client?http://localhost:${appConfig.Port}`,
-    'webpack/hot/only-dev-server',
-  ]
-}
-
-module.exports = config;
+module.exports = merge(config, envConfig);

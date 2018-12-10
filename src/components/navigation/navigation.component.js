@@ -1,14 +1,59 @@
+// @flow
 import React from 'react';
-import {Link} from 'react-router-dom';
+import './navigation.css';
 
-const NavigationComponent = () => (
-  <div>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/sample">Sample</Link></li>
-    </ul>
-  </div>
-);
+type State = {
+  current: string,
+};
+export default class Navigation extends React.Component<{}, State> {
+  state = {
+    current: 'home',
+  };
+  getClassName = (route: string) => {
+    const { current } = this.state;
+    return route === current ? 'current' : '';
+  };
 
-export default NavigationComponent;
+  onSelect = (route: string) => {
+    this.setState({ current: route });
+  };
+
+  render() {
+    return (
+      <nav>
+        <ul id="nav" className="nav">
+          <li
+            onClick={() => this.onSelect('home')}
+            className={this.getClassName('home')}
+          >
+            <a href="#home">Home</a>
+          </li>
+          <li
+            onClick={() => this.onSelect('about')}
+            className={this.getClassName('about')}
+          >
+            <a href="#about">About</a>
+          </li>
+          <li
+            onClick={() => this.onSelect('experience')}
+            className={this.getClassName('experience')}
+          >
+            <a href="#resume">Experience</a>
+          </li>
+          <li
+            onClick={() => this.onSelect('skills')}
+            className={this.getClassName('skills')}
+          >
+            <a href="#skills">Skills</a>
+          </li>
+          <li
+            onClick={() => this.onSelect('contact')}
+            className={this.getClassName('contact')}
+          >
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}

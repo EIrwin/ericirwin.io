@@ -8,12 +8,14 @@
         }
       }
     ],
-    ["@babel/preset-react"]
+    ["@babel/preset-react"],
+    ["@babel/preset-flow"]
   ],
   "plugins": [
     "@babel/transform-runtime",
     "transform-class-properties",
     "react-hot-loader/babel"
+//    ["flow-react-proptypes", { "ignoreNodeModules": true }]
   ],
 
   "env": {
