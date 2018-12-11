@@ -4,11 +4,40 @@ import './about.css';
 
 export default function About() {
   return (
-    <section>
-      <div>
+    <section id="about">
+      <div className="container">
         <div className="row">
-          <div className="col-sm-8">Test</div>
-          <div>Boo</div>
+          <div className="col-sm-3">
+            <img
+              className="profile-pic"
+              src={`https://pbs.twimg.com/profile_images/1400640089/avatar_ericirwin_400x400.png`}
+              alt="Eric Irwin Profile Pic"
+            />
+          </div>
+          <div className="col-sm-9">
+            <h2>About Me</h2>
+            <p>
+              Use this bio section as your way of describing yourself and
+              saying what you do, what technologies you like to use or feel
+              most comfortable with, describing your personality, or whatever
+              else you feel like throwing in.
+            </p>
+            <div className="row">
+              <div className="col">
+                <h2>Contact Details</h2>
+                <p className="address">
+                  <span>Eric Irwin</span>
+                  <br />
+                  <span>Denver, CO</span>
+                  <br />
+                  <span>480-823-8782</span>
+                  <br />
+                  <span>Eric.Irwin@gmail.com</span>
+                </p>
+              </div>
+            </div>
+            <div className="col" />
+          </div>
         </div>
       </div>
     </section>
