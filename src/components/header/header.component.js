@@ -5,7 +5,7 @@ import './header.css';
 
 export default function Header() {
   return (
-    <header>
+    <header id="header">
       <div className="banner">
         <div className="intro">
           <h1>{`I'm Eric Irwin.`}</h1>

@@ -1,16 +1,11 @@
 // @flow
-import express, {
-  type $Application,
-  type $Request,
-  type $Response,
-} from 'express';
 const PORT = process.env.PORT || 8080;
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 if (isProduction) {
   const express = require('express');
-  const app: $Application = express();
+  const app = express();
   const path = require('path');
 
   // Configure static resources
