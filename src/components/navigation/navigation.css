@@ -11,20 +11,17 @@
 }
 
 #nav ul {
-  /*min-height: 48px;*/
   width: auto;
   margin: 0;
-
-  /* center align the menu */
   text-align: center;
 }
+
 #nav ul li {
   position: relative;
   list-style: none;
   height: 48px;
   display: inline-block;
 }
-
 
 #nav li a {
   display: inline-block;
@@ -34,9 +31,6 @@
   color: #fff;
   line-height: 32px;
 }
-
-
-.opaque { background-color: #333; }
 
 #nav.navbar-shrink {
   background-color: #333;
@@ -50,3 +44,6 @@
 #nav li a.active:focus {
   color: #f06000;
 }
+
+.opaque { background-color: #333; }
+
