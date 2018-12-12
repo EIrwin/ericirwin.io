@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { ScrollLink } from '../common';
 import { SocialNetworks } from '../social';
 import './header.css';
 
@@ -16,9 +17,11 @@ export default function Header() {
           <SocialNetworks />
         </div>
         <div className="scrollDown">
-          <a>
-            <i className="icon-down-circle" />
-          </a>
+          <ScrollLink to="about">
+            <a>
+              <i className="icon-down-circle" />
+            </a>
+          </ScrollLink>
         </div>
       </div>
     </header>

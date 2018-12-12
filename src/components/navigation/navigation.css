@@ -11,7 +11,7 @@
 }
 
 #nav ul {
-  min-height: 48px;
+  /*min-height: 48px;*/
   width: auto;
   margin: 0;
 
@@ -29,17 +29,23 @@
 #nav li a {
   display: inline-block;
   padding: 8px 13px;
-  line-height: 32px;
   text-decoration: none;
   text-align: left;
   color: #fff;
 }
 
 
-#nav li.current a { color: #F06000; }
-
 .opaque { background-color: #333; }
 
 #nav.navbar-shrink {
   background-color: #333;
+}
+
+#nav li a.active {
+  color: #f06000
+}
+
+#nav li a.active:hover,
+#nav li a.active:focus {
+  color: #f06000;
 }

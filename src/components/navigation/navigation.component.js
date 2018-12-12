@@ -1,18 +1,45 @@
 // @flow
 import React from 'react';
-import classNames from 'classnames';
+import { ScrollLink } from '../common';
 import './navigation.css';
 
 type State = {
-  current: string,
   shrink: boolean,
 };
+
+type NavLink = {
+  target: string,
+  label: string,
+};
+
+const links: NavLink[] = [
+  {
+    target: 'header',
+    label: 'Home',
+  },
+  {
+    target: 'about',
+    label: 'About',
+  },
+  {
+    target: 'experience',
+    label: 'Experience',
+  },
+  {
+    target: 'skills',
+    label: 'Skills',
+  },
+  {
+    target: 'contact',
+    label: 'Contact',
+  },
+];
+
 export default class Navigation extends React.Component<{}, State> {
   didScroll: boolean;
   timeout: any;
 
   state = {
-    current: 'home',
     shrink: false,
   };
 
@@ -40,50 +67,20 @@ export default class Navigation extends React.Component<{}, State> {
     if (this.state.shrink !== shrink) this.setState({ shrink });
   };
 
-  getClassName = (route: string) => {
-    const { current } = this.state;
-    return route === current ? 'current' : '';
-  };
-
-  onSelect = (route: string) => {
-    this.setState({ current: route });
-  };
-
   render() {
     const { shrink } = this.state;
     return (
       <nav id="nav" className={shrink && 'navbar-shrink'}>
         <ul className="navigation">
-          <li
-            onClick={() => this.onSelect('home')}
-            className={this.getClassName('home')}
-          >
-            <a href="#home">Home</a>
-          </li>
-          <li
-            onClick={() => this.onSelect('about')}
-            className={this.getClassName('about')}
-          >
-            <a href="#about">About</a>
-          </li>
-          <li
-            onClick={() => this.onSelect('experience')}
-            className={this.getClassName('experience')}
-          >
-            <a href="#resume">Experience</a>
-          </li>
-          <li
-            onClick={() => this.onSelect('skills')}
-            className={this.getClassName('skills')}
-          >
-            <a href="#skills">Skills</a>
-          </li>
-          <li
-            onClick={() => this.onSelect('contact')}
-            className={this.getClassName('contact')}
-          >
-            <a href="#contact">Contact</a>
-          </li>
+          {links.map(link => {
+            return (
+              <li>
+                <ScrollLink to={link.target} activeClass="active" spy>
+                  {link.label}
+                </ScrollLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     );
