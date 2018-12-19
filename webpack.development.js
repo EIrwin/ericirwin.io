@@ -10,6 +10,6 @@ module.exports = merge(common, {
     './src/index.js',
     'react-hot-loader/patch',
     `webpack-dev-server/client?http://localhost:${config.Port}`,
-    'webpack/hot/only-dev-server',
+    // 'webpack/hot/only-dev-server',
   ],
 });
