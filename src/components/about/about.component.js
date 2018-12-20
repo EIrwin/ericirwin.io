@@ -6,8 +6,8 @@ export default function About() {
   return (
     <section id="about">
       <div className="container">
-        <div className="row">
-          <div className="col-sm-4">
+        <div className="row align-items-center">
+          <div className="col-sm-4 text-center">
             <img
               className="profile-pic"
               src={`https://pbs.twimg.com/profile_images/1400640089/avatar_ericirwin_400x400.png`}

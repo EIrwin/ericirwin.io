@@ -42,7 +42,7 @@ const experiences: ExperienceItem[] = [
     duration: 'SUMMER 2012 - SUMMER 2015',
     imageSrc: `${BASE_IMAGE_PATH}/integrate.png`,
     location: 'Scottsdale, AZ',
-    position: 'Software Engineer & Project Lead',
+    position: 'Software Engineer | Project Lead',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt magna ut libero porttitor vehicula. Aliquam ultrices eros ut euismod semper. Vestibulum tincidunt nec dolor quis bibendum. Nunc eget leo non est dapibus condimentum in sed erat. Sed sed tempus diam, sit amet dignissim leo. Nam vulputate tempor leo sed imperdiet. Mauris bibendum volutpat quam, lacinia interdum nisi placerat et. Aenean sodales neque nec maximus cursus. Nullam erat velit, finibus a purus sed, ultrices aliquam erat.',
   },
@@ -78,7 +78,7 @@ const experiences: ExperienceItem[] = [
     duration: 'FALL 2016 - PRESENT',
     imageSrc: `${BASE_IMAGE_PATH}/commercialtribe.png`,
     location: 'Denver, CO',
-    position: 'Site Reliability Engineer & Sr. Software Engineer ',
+    position: 'Site Reliability Engineer | Sr. Software Engineer ',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt magna ut libero porttitor vehicula. Aliquam ultrices eros ut euismod semper. Vestibulum tincidunt nec dolor quis bibendum. Nunc eget leo non est dapibus condimentum in sed erat. Sed sed tempus diam, sit amet dignissim leo. Nam vulputate tempor leo sed imperdiet. Mauris bibendum volutpat quam, lacinia interdum nisi placerat et. Aenean sodales neque nec maximus cursus. Nullam erat velit, finibus a purus sed, ultrices aliquam erat.',
   },
