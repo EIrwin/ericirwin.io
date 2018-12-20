@@ -11,6 +11,24 @@ const BASE_IMAGE_PATH = '../../../public/images/experience';
 
 const experiences: ExperienceItem[] = [
   {
+    title: 'The Citadel',
+    duration: 'FALL 2007 - SPRING 2010',
+    imageSrc: `${BASE_IMAGE_PATH}/citadel.png`,
+    location: 'Charleston, SC',
+    position: 'Bachelor of Science | Computer Science',
+    description:
+      'Graduated with honors (Cum Laude) in three years with a degree in Computer Science and a Minor in Management Information Systems.',
+  },
+  {
+    title: 'Arizona State University',
+    duration: 'FALL 2010 -SPRING 2010',
+    imageSrc: `${BASE_IMAGE_PATH}/arizonastate.jpg`,
+    location: 'Tempe, AZ',
+    position: 'MSE | Master of Software Engineering',
+    description:
+      'Focused studies and research towards Distributed Systems in Software Engineering.',
+  },
+  {
     title: 'The Chatfield Group',
     duration: '2010-2011',
     imageSrc: `${BASE_IMAGE_PATH}/chatfieldgroup.png`,
@@ -62,7 +80,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'CTO & Co-founder',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt magna ut libero porttitor vehicula. Aliquam ultrices eros ut euismod semper. Vestibulum tincidunt nec dolor quis bibendum. Nunc eget leo non est dapibus condimentum in sed erat. Sed sed tempus diam, sit amet dignissim leo. Nam vulputate tempor leo sed imperdiet. Mauris bibendum volutpat quam, lacinia interdum nisi placerat et. Aenean sodales neque nec maximus cursus. Nullam erat velit, finibus a purus sed, ultrices aliquam erat.',
+      'Engineered a mobile vending platform allowing customers to have their food and beverage delivered directly to them from a single mobile application instead of being forced to download a new app at each venue they go to. No more waiting in lines and missing the action..',
   },
   {
     title: 'Carvana',

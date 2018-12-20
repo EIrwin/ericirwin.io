@@ -112,9 +112,15 @@
   margin-bottom: 0
 }
 
-.timeline .timeline-heading .timeline-year {
+.timeline .timeline-heading .timeline-title{
   margin-top: 0;
   color: inherit
+}
+
+.timeline .timeline-heading .timeline-duration{
+  font: 12px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+  color: #6E7881;
 }
 
 .timeline .timeline-heading .subheading {

@@ -7,7 +7,7 @@ export type ExperienceItem = {
   location: string,
   title: string,
   description: string,
-  position: string,
+  position?: string,
   imageSrc: string,
 };
 
@@ -17,24 +17,26 @@ type Props = {
 };
 
 export default function TimelineItem({ inverted, experience }: Props) {
+  const { imageSrc, location, position, duration, description, title } = experience;
   return (
     <li className={inverted ? 'timeline-inverted' : ''}>
       <div className="timeline-image">
         <img
           className={classNames('rounded-circle', 'img-responsive')}
-          src={experience.imageSrc}
-          alt={experience.location}
+          src={imageSrc}
+          alt={location}
         />
       </div>
       <div className="timeline-panel">
         <div className="timeline-heading">
-          <h4 className="timeline-year">{experience.duration}</h4>
-          <h5 className="subheading">{experience.position}</h5>
+          <h4 className="timeline-title">{title}</h4>
+          <h5 className="subheading">{position}</h5>
+          <h5 className="timeline-duration"><i>{duration}</i></h5>
         </div>
         <div className={classNames('timeline-body', 'text-muted')}>
           <p
             className="text-muted"
-            dangerouslySetInnerHTML={{ __html: experience.description }}
+            dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
       </div>
