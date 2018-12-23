@@ -46,6 +46,9 @@ class Contact extends React.Component<Props, State> {
       <section id="contact">
         <div className="container">
           <h2>Contact Me</h2>
+          <p className="subheading">
+            Feel free to shoot me a message anytime!
+          </p>
           <div className="row">
             <div className="col-md-9">
               <div className="row form-group">
@@ -111,7 +114,7 @@ class Contact extends React.Component<Props, State> {
                 </div>
                 <div className="col">
                   <textarea
-                    rows="4"
+                    rows="3"
                     value={this.state.body}
                     onChange={e => this.setState({ body: e.target.value })}
                     id="contactMessage"

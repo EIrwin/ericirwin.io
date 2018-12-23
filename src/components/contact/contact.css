@@ -9,12 +9,16 @@
   font: 40px 'opensans-bold', sans-serif;
   color: #fff;
   text-align: center;
-  margin-bottom: 75px;
+}
+
+#contact p.subheading {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 #contact {
   background: #191919;
-  padding-top: 96px;
+  padding-top: 64px;
   padding-bottom: 102px;
   color: #636363;
 }
