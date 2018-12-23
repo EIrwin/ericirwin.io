@@ -37,8 +37,10 @@
 }
 
 #nav li a.active {
-  color: #f06000;
+  color: #11ABB0;
 }
+
+/*#header .social li a:hover { color: #11ABB0; }*/
 
 #nav li a.active:hover,
 #nav li a.active:focus {

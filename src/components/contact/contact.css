@@ -111,6 +111,7 @@
 }
 
 #contact .social li a { color: #fff; }
+#contact .social li a:hover { color: #11ABB0; }
 
 /* Widgets */
 #contact .widget_contact {
