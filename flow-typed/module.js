@@ -18,3 +18,7 @@ declare module 'webpack-merge' {
 declare module 'react-hot-loader' {
   declare module.exports: any;
 }
+
+declare module 'validator/lib/isEmail' {
+  declare module.exports: any;
+}

@@ -97,6 +97,11 @@
   font-size: 13px;
 }
 
+#contact .error {
+  text-align: center;
+  color: #11ABB0;
+}
+
 /* Social Network Links*/
 #contact .social {
   margin: 24px 0;

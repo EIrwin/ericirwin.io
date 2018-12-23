@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import './contact.css';
+import isEmail from 'validator/lib/isEmail';
 import SocialNetworks from '../social/social-networks.component';
 
 type Props = {};
@@ -10,6 +11,7 @@ type State = {
   body: string,
   email: string,
   subject: string,
+  error: ?string,
 };
 
 class Contact extends React.Component<Props, State> {
@@ -18,17 +20,34 @@ class Contact extends React.Component<Props, State> {
     body: '',
     email: '',
     subject: '',
+    error: null,
   };
 
-  handleSubmit = () => {};
+  handleSubmit = (e: any) => {
+    e.preventDefault();
+    const { name, body, email, subject } = this.state;
+
+    let error;
+    if (!name) error = 'Please enter Name';
+    else if (!email || !isEmail(email)) error = 'Please enter valid Email';
+    else if (!subject) error = 'Please enter Subject';
+    else if (!body) error = 'Please enter Message';
+
+    this.setState({ error });
+
+    if (!error) {
+      // TODO submit contact form
+    }
+  };
 
   render() {
-    let section = (
+    const { error } = this.state;
+    return (
       <section id="contact">
         <div className="container">
           <h2>Contact Me</h2>
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-9">
               <div className="row form-group">
                 <div className="col-sm-2" />
                 <div className="col-sm-2">
@@ -104,11 +123,19 @@ class Contact extends React.Component<Props, State> {
               <div className="row form-group">
                 <div className="col-sm-4" />
                 <div className="col">
-                  <button className="submit">SUBMIT</button>
+                  <button className="submit" onClick={this.handleSubmit}>
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+              <div className="row form-group">
+                <div className="col-sm-4" />
+                <div className="col">
+                  <p className="help-block error">{error}</p>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-3">
               <div className="widget widget_contact">
                 <h4>Contact Details</h4>
                 <p className="address">
@@ -122,14 +149,13 @@ class Contact extends React.Component<Props, State> {
                 </p>
               </div>
               <div className="widget widget_social">
-                <SocialNetworks/>
+                <SocialNetworks />
               </div>
             </div>
           </div>
         </div>
       </section>
     );
-    return section;
   }
 }
 
