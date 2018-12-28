@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import './social.css';
 
 export default function SocialNetworks() {
   const data = [

@@ -106,19 +106,6 @@
   color: #11ABB0;
 }
 
-/* Social Network Links*/
-#contact .social {
-  margin: 24px 0;
-  padding: 0;
-  font-size: 30px;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
-}
-#contact .social li {
-  display: inline-block;
-  margin: 0 15px;
-  padding: 0;
-}
-
 #contact .social li a { color: #fff; }
 #contact .social li a:hover { color: #11ABB0; }
 
