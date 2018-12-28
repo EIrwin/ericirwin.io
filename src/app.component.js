@@ -2,6 +2,7 @@
 import React from 'react';
 import { About } from './components/about';
 import { Contact } from './components/contact';
+import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { Experience } from './components/experience';
 import { Navigation } from './components/navigation';
@@ -14,6 +15,7 @@ const AppComponent = () => (
     <About />
     <Experience />
     <Contact />
+    <Footer />
   </div>
 );
 
