@@ -9,7 +9,7 @@ import { Navigation } from './components/navigation';
 
 import './app.css';
 const AppComponent = () => (
-  <div className="app">
+  <div>
     <Navigation />
     <Header />
     <About />

@@ -2,6 +2,49 @@
 import React from 'react';
 import './about.css';
 
+const interests = [
+  {
+    label: 'Running',
+    className: 'fa fa-running',
+  },
+  {
+    label: 'Biking',
+    className: 'fa fa-bicycle',
+  },
+  {
+    label: 'Snowboarding',
+    className: 'fa fa-snowboarding',
+  },
+  {
+    label: 'Hiking',
+    className: 'fa fa-hiking',
+  },
+  {
+    label: 'Baseball',
+    className: 'fa fa-baseball-ball',
+  },
+  {
+    label: 'Movies',
+    className: 'fa fa-film',
+  },
+];
+const renderInterests = () => {
+  return (
+    <div className="row">
+      {interests.map(i => {
+        return (
+          <div className="col-sm-2 interest">
+            <div className="text-center">
+              <i className={`${i.className} icon`} />
+            </div>
+            <div className="text-center label">{i.label}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default function About() {
   return (
     <section id="about">
@@ -24,6 +67,12 @@ export default function About() {
             </p>
             <div className="row">
               <div className="col">
+                <h2>Interests</h2>
+                {renderInterests()}
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
                 <h2>Contact Details</h2>
                 <p className="address">
                   <span>Eric Irwin</span>
@@ -36,6 +85,7 @@ export default function About() {
                 </p>
               </div>
             </div>
+
             <div className="col" />
           </div>
         </div>

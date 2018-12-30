@@ -7,7 +7,7 @@ export default function SocialNetworks() {
     {
       name: 'linkedin',
       url: 'https://www.linkedin.com/in/ericirwin1124/',
-      className: 'fa fa-linkedin',
+      className: 'fab fa-linkedin-in',
     },
     {
       name: 'github',

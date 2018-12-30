@@ -26,21 +26,23 @@
   border-radius: 100%;
   border: 7px solid white;
 }
-/*#about .contact-details { width: 41.66667%; }*/
-/*#about .download {*/
-  /*width: 58.33333%;*/
-  /*padding-top: 6px;*/
-/*}*/
-/*#about .main-col { padding-right: 5%; }*/
-/*#about .download .button {*/
-  /*margin-top: 6px;*/
-  /*background: #444;*/
-/*}*/
-/*#about .download .button:hover {*/
-  /*background: #fff;*/
-  /*color: #2B2B2B;*/
-/*}*/
-/*#about .download .button i {*/
-  /*margin-right: 15px;*/
-  /*font-size: 20px;*/
-/*}*/
+
+#about h1 {
+  text-align: center;
+  margin-top: 24px;
+}
+
+#about .interest{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: -15px;
+}
+
+#about .interest .icon {
+  font-size: 36px;
+  color: #fff;
+}
+
+#about .interest .label {
+}
+
