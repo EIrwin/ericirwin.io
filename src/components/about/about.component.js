@@ -5,27 +5,27 @@ import './about.css';
 const interests = [
   {
     label: 'Running',
-    className: 'fa fa-running',
+    iconClass: 'fa fa-running',
   },
   {
     label: 'Biking',
-    className: 'fa fa-bicycle',
+    iconClass: 'fa fa-bicycle',
   },
   {
     label: 'Snowboarding',
-    className: 'fa fa-snowboarding',
+    iconClass: 'fa fa-snowboarding',
   },
   {
     label: 'Hiking',
-    className: 'fa fa-hiking',
+    iconClass: 'fa fa-hiking',
   },
   {
     label: 'Baseball',
-    className: 'fa fa-baseball-ball',
+    iconClass: 'fa fa-baseball-ball',
   },
   {
     label: 'Movies',
-    className: 'fa fa-film',
+    iconClass: 'fa fa-film',
   },
 ];
 const renderInterests = () => {
@@ -35,7 +35,7 @@ const renderInterests = () => {
         return (
           <div className="col-sm-2 interest">
             <div className="text-center">
-              <i className={`${i.className} icon`} />
+              <i className={`${i.iconClass} icon`} />
             </div>
             <div className="text-center label">{i.label}</div>
           </div>
@@ -68,6 +68,10 @@ export default function About() {
             <div className="row">
               <div className="col">
                 <h2>Interests</h2>
+                <p>
+                  When I am not coding, this is what I love to spend my time
+                  doing!
+                </p>
                 {renderInterests()}
               </div>
             </div>

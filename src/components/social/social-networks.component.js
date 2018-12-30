@@ -12,12 +12,12 @@ export default function SocialNetworks() {
     {
       name: 'github',
       url: 'http://github.com/eirwin',
-      className: 'fa fa-github',
+      className: 'fab fa-github',
     },
     {
       name: 'twitter',
       url: 'https://twitter.com/JediCowboyEric',
-      className: 'fa fa-twitter',
+      className: 'fab fa-twitter',
     },
   ];
 
