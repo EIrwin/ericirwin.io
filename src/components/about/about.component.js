@@ -1,49 +1,7 @@
 // @flow
 import React from 'react';
+import Interests from './interests.component';
 import './about.css';
-
-const interests = [
-  {
-    label: 'Running',
-    iconClass: 'fa fa-running',
-  },
-  {
-    label: 'Biking',
-    iconClass: 'fa fa-bicycle',
-  },
-  {
-    label: 'Snowboarding',
-    iconClass: 'fa fa-snowboarding',
-  },
-  {
-    label: 'Hiking',
-    iconClass: 'fa fa-hiking',
-  },
-  {
-    label: 'Baseball',
-    iconClass: 'fa fa-baseball-ball',
-  },
-  {
-    label: 'Movies',
-    iconClass: 'fa fa-film',
-  },
-];
-const renderInterests = () => {
-  return (
-    <div className="row">
-      {interests.map(i => {
-        return (
-          <div className="col-sm-2 interest">
-            <div className="text-center">
-              <i className={`${i.iconClass} icon`} />
-            </div>
-            <div className="text-center label">{i.label}</div>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
 
 export default function About() {
   return (
@@ -72,7 +30,7 @@ export default function About() {
                   When I am not coding, this is what I love to spend my time
                   doing!
                 </p>
-                {renderInterests()}
+                <Interests/>
               </div>
             </div>
             <div className="row">

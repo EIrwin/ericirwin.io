@@ -122,7 +122,7 @@ export default function Experience() {
                 className={classNames('timeline-inverted', 'timeline-final')}
               >
                 <div className="timeline-image">
-                  <ScrollLink to="contactme">
+                  <ScrollLink to="contact">
                     <h4 className="hearmore">
                       Want to
                       <br />

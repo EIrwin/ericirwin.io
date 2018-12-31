@@ -1,0 +1,14 @@
+
+.interest-list {
+  margin-left: -30px;
+}
+
+.interest{
+  margin-bottom: 24px;
+  padding-left: 0px;
+}
+
+.interest .icon {
+  font-size: 36px;
+  color: #fff;
+}
