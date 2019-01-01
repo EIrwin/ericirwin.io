@@ -5,7 +5,10 @@ flow:
 	yarn && yarn flow
 
 build:
-	yarn && yarn build && yarn build:server
+	yarn && yarn build
+
+clean:
+	rm -rf dist
 
 ci:
 	yarn && yarn lint && yarn flow
