@@ -1,1 +1,1 @@
-# Eric Irwin [![CircleCI](https://circleci.com/gh/EIrwin/ericirwin.io/tree/master.svg?style=svg)](https://circleci.com/gh/EIrwin/ericirwin.io/tree/master)
+# Eric Irwin [![CircleCI](https://img.shields.io/circleci/project/github/eirwin/ericirwin.io/master.svg)](https://circleci.com/gh/eirwin/ericirwin.io/tree/master)
