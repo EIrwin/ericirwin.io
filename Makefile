@@ -5,7 +5,7 @@ flow:
 	yarn && yarn flow
 
 build:
-	yarn && yarn relay && yarn build && yarn build:server
+	yarn && yarn build && yarn build:server
 
 ci:
 	yarn && yarn lint && yarn flow
