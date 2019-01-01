@@ -11,7 +11,7 @@ export default function Header() {
         <div className="intro">
           <h1>{`I'm Eric Irwin.`}</h1>
           <h3>
-            {`I'm a (Your City) based (Your Occupation Here). Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer.`}
+            {`I'm a Denver based Senior Software Engineer who is passionate about technology and delivering impactful results.`}
           </h3>
           <hr />
           <SocialNetworks />

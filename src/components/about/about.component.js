@@ -18,10 +18,10 @@ export default function About() {
           <div className="col-sm-8">
             <h2>About Me</h2>
             <p>
-              Use this bio section as your way of describing yourself and
-              saying what you do, what technologies you like to use or feel
-              most comfortable with, describing your personality, or whatever
-              else you feel like throwing in.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh
+              ultricies cursus in vitae dui. Donec vel ligula vitae quam
+              ultrices porttitor vitae a ligula.
             </p>
             <div className="row">
               <div className="col">
@@ -30,7 +30,7 @@ export default function About() {
                   When I am not coding, this is what I love to spend my time
                   doing!
                 </p>
-                <Interests/>
+                <Interests />
               </div>
             </div>
             <div className="row">
