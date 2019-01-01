@@ -11,7 +11,6 @@ jobs:
     - checkout
     - setup_remote_docker
 
-    # Download and cache dependencies
     - restore_cache:
         keys:
         - v1-dependencies-{{ checksum "package.json" }}
@@ -35,7 +34,15 @@ jobs:
         command: make build
 
     - run:
-        name: Docker Build
+        command: |
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/darwin/amd64/kubectl
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
+          kubectl version
+          echo $ENCODED_K8S_CONFIG | base64 -d > ~/.kube/config
+
+    - run:
+        name: Docker Build & Push
         command: |
           docker build -t ericirwin.io .
           docker tag ericirwin.io docker.io/eirwin/ericirwin.io:$CIRCLE_SHA1
