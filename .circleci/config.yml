@@ -39,5 +39,5 @@ jobs:
         command: |
           docker build -t ericirwin.io .
           docker tag ericirwin.io docker.io/eirwin/ericirwin.io:$CIRCLE_SHA1
-#          docker login -u $DOCKER_LOGIN_USERNAME --password-stdin $DOCKER_LOGIN_PASSWORD
+          docker login -u $DOCKER_LOGIN_USERNAME --password $DOCKER_LOGIN_PASSWORD
 #          docker push docker.io/eirwin/ericirwin.io:$CIRCLE_SHA1
