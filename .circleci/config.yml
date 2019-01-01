@@ -41,6 +41,7 @@ jobs:
           sudo mv ./kubectl /usr/local/bin/kubectl
           echo $ENCODED_K8S_CONFIG | base64 --decode > kubeconfig
           mkdir -p $HOME/.kube && cp kubeconfig $HOME/.kube/config
+          kubectl version
 
     - run:
         name: Docker Build & Push
