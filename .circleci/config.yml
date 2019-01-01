@@ -26,19 +26,17 @@ jobs:
         key: v1-dependencies-{{ checksum "package.json" }}
 
     - run:
-        name: ci
+        name: CI
         command: make ci
 
     - run:
-        name: build
+        name: Build
         command: make build
 
-#    - run:
-#        name: deploy-web
-#        command: ssh -o "StrictHostKeyChecking no" $DROPLET_USER@$DROPLET_IP 'cd /opt/chrisdriscol && eval `ssh-agent -s` && ssh-add ~/.ssh/github_rsa && git fetch origin && git reset --hard origin/master && make docker-web'
-#
-#    - run:
-#        name: prune
-#        command: ssh -o "StrictHostKeyChecking no" $DROPLET_USER@$DROPLET_IP 'docker system prune -f'
-
-
+    - run:
+        name: Docker Build
+        command: |
+          docker build -t ${PROJECT_NAME} .
+          docker tag ${PROJECT_NAME} docker.io/eirwin/${PROJECT_NAME}:${CIRCLE_SHA1}
+          docker login -u ${DOCKER_LOGIN_USERNAME} --password-stdin ${DOCKER_LOGIN_PASSWORD}
+          docker push docker.io/eirwin/${PROJECT_NAME}:${CIRCLE_SHA1}
