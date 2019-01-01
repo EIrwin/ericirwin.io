@@ -40,7 +40,7 @@ jobs:
           chmod +x ./kubectl
           sudo mv ./kubectl /usr/local/bin/kubectl
           echo $ENCODED_K8S_CONFIG | base64 --decode > kubeconfig
-          cp kubeconfig $HOME/.kube/config
+          mkdir -p $HOME/.kube && cp kubeconfig $HOME/.kube/config
 
     - run:
         name: Docker Build & Push
