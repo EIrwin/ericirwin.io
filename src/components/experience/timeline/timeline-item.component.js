@@ -17,7 +17,14 @@ type Props = {
 };
 
 export default function TimelineItem({ inverted, experience }: Props) {
-  const { imageSrc, location, position, duration, description, title } = experience;
+  const {
+    imageSrc,
+    location,
+    position,
+    duration,
+    description,
+    title,
+  } = experience;
   return (
     <li className={inverted ? 'timeline-inverted' : ''}>
       <div className="timeline-image">
@@ -31,7 +38,9 @@ export default function TimelineItem({ inverted, experience }: Props) {
         <div className="timeline-heading">
           <h4 className="timeline-title">{title}</h4>
           <h5 className="subheading">{position}</h5>
-          <h5 className="timeline-duration"><i>{duration}</i></h5>
+          <h5 className="timeline-duration">
+            <i>{duration}</i>
+          </h5>
         </div>
         <div className={classNames('timeline-body', 'text-muted')}>
           <p
