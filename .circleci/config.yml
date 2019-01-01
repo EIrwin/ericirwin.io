@@ -56,5 +56,5 @@ jobs:
     - run:
         name: Deploy
         command: |
-          kubectl apply -Rf k8s/
+          kubectl replace --force -Rf k8s/
 
