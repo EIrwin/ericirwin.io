@@ -36,7 +36,7 @@ jobs:
     - run:
         name: Docker Build
         command: |
-          docker build -t ${PROJECT_NAME} .
-          docker tag ${PROJECT_NAME} docker.io/eirwin/${PROJECT_NAME}:${CIRCLE_SHA1}
+          docker build -t ericirwin.io .
+          docker tag ericirwin.io docker.io/eirwin/ericirwin.io:${CIRCLE_SHA1}
           docker login -u ${DOCKER_LOGIN_USERNAME} --password-stdin ${DOCKER_LOGIN_PASSWORD}
-          docker push docker.io/eirwin/${PROJECT_NAME}:${CIRCLE_SHA1}
+          docker push docker.io/eirwin/ericirwin.io:${CIRCLE_SHA1}
