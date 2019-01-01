@@ -8,15 +8,10 @@ if (isProduction) {
   const app = express();
   const path = require('path');
 
-  // Configure static resources
-  app.use(express.static(path.join(__dirname, '/dist')));
-
-  // Configure server-side routing
   // $FlowFixMe
-  app.get('*', (req, res) => {
-    const dist = path.join(__dirname, '/dist/index.html');
-    res.sendFile(dist);
-  });
+  app.use('/public', express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(path.join(__dirname, '/dist')));
 
   // Open socket
   app.listen(PORT, () => {
