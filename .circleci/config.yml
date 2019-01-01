@@ -52,3 +52,9 @@ jobs:
           docker login -u $DOCKER_LOGIN_USERNAME --password $DOCKER_LOGIN_PASSWORD
           docker push docker.io/eirwin/ericirwin.io:$CIRCLE_SHA1
           docker push docker.io/eirwin/ericirwin.io:latest
+
+    - run:
+        name: Deploy
+        command: |
+          kubectl apply -Rf k8s/
+
