@@ -22,3 +22,11 @@ declare module 'react-hot-loader' {
 declare module 'validator/lib/isEmail' {
   declare module.exports: any;
 }
+
+declare module 'react-vis' {
+  declare module.exports: any;
+}
+
+declare module 'classnames' {
+  declare module.exports: any;
+}
