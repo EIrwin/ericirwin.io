@@ -150,7 +150,7 @@ type State = {
 
 export default class BasicSunburst extends React.Component<Props, State> {
   state = {
-    pathValue: " ",
+    pathValue: ' ',
     data: decoratedData,
     finalValue: 'Skills',
     clicked: false,
