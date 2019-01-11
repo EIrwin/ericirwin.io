@@ -1,0 +1,11 @@
+#skills-distribution {
+  background: #191919;
+  padding-top: 64px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+#skills-distribution .chart {
+  margin-left: auto;
+  margin-right: auto;
+}

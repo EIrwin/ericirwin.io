@@ -106,7 +106,12 @@ export default function Experience() {
   const renderItem = (item: any, index: number) => {
     /* $FlowFixMe */
     return (
-      <TimeLineItem key={index} inverted={index % 2 === 1} experience={item} />
+      <TimeLineItem
+        className=""
+        key={index}
+        inverted={index % 2 === 1}
+        experience={item}
+      />
     );
   };
 
