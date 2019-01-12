@@ -1,0 +1,17 @@
+#favorites img {
+  height: 100px;
+  text-align: center;
+  display:block;
+  margin:auto;
+}
+
+#favorites h2 {
+  font: 40px 'opensans-bold', sans-serif;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+#favorites .label {
+  text-align: center;
+  color: #ffffff;
+}

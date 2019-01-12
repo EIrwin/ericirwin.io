@@ -4,6 +4,7 @@ import { Sunburst, Hint, LabelSeries } from 'react-vis';
 import './skills.css';
 import { SkillsBreakdown } from './breakdown';
 import { SkillsDistribution } from './distribution';
+import { Favorites } from './favorites';
 
 export default function Skills() {
   return (
@@ -18,6 +19,11 @@ export default function Skills() {
           <div className="col-md-6">
             <h1 className="subtitle">Distribution</h1>
             <SkillsDistribution />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <Favorites />
           </div>
         </div>
       </div>
