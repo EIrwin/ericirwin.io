@@ -55,7 +55,7 @@ const data: Favorite[] = [
 export default function Favorites() {
   const renderItem = (item: Favorite) => {
     return (
-      <div className="col-sm-2">
+      <div className="col-md-2">
         <img className="img-responsive" src={item.imageSrc} alt={item.title} />
         <p className="label">{item.title}</p>
       </div>
