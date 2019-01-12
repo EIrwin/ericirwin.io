@@ -31,73 +31,81 @@ const skillData = {
   children: [
     {
       name: 'Frontend',
+      hex: '#777777',
       children: [
-        { name: 'React', hex: '#12939A', value: 10 },
-        { name: 'React Native', hex: '#12939A', value: 10 },
-        { name: 'Angular', hex: '#12939A', value: 10 },
+        { name: 'React', hex: '#11ABB0', value: 10 },
+        { name: 'React Native', hex: '#11ABB0', value: 10 },
+        { name: 'Angular', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Backend',
+      hex: '#777777',
       children: [
-        { name: 'Node', hex: '#12939A', value: 10 },
-        { name: 'Go', hex: '#12939A', value: 10 },
-        { name: 'C#', hex: '#12939A', value: 10 },
-        { name: 'Java', hex: '#12939A', value: 10 },
-        { name: 'Typescript', hex: '#12939A', value: 10 },
+        { name: 'Node', hex: '#11ABB0', value: 10 },
+        { name: 'Go', hex: '#11ABB0', value: 10 },
+        { name: 'C#', hex: '#11ABB0', value: 10 },
+        { name: 'Java', hex: '#11ABB0', value: 10 },
+        { name: 'Typescript', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Database',
+      hex: '#777777',
       children: [
-        { name: 'Postgres', hex: '#12939A', value: 10 },
-        { name: 'MongoDB', hex: '#12939A', value: 10 },
-        { name: 'MySQL', hex: '#12939A', value: 10 },
-        { name: 'SQL Server', hex: '#12939A', value: 10 },
-        { name: 'Redis', hex: '#12939A', value: 10 },
+        { name: 'Postgres', hex: '#11ABB0', value: 10 },
+        { name: 'MongoDB', hex: '#11ABB0', value: 10 },
+        { name: 'MySQL', hex: '#11ABB0', value: 10 },
+        { name: 'SQL Server', hex: '#11ABB0', value: 10 },
+        { name: 'Redis', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Ops/Infrastructure',
+      hex: '#777777',
       children: [
-        { name: 'Docker', hex: '#12939A', value: 10 },
-        { name: 'Kubernetes', hex: '#12939A', value: 10 },
-        { name: 'RabbitMQ', hex: '#12939A', value: 10 },
-        { name: 'NGINX', hex: '#12939A', value: 10 },
-        { name: 'HAProxy', hex: '#12939A', value: 10 },
+        { name: 'Docker', hex: '#11ABB0', value: 10 },
+        { name: 'Kubernetes', hex: '#11ABB0', value: 10 },
+        { name: 'RabbitMQ', hex: '#11ABB0', value: 10 },
+        { name: 'NGINX', hex: '#11ABB0', value: 10 },
+        { name: 'HAProxy', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Monitoring/Observability',
+      hex: '#777777',
       children: [
-        { name: 'New Relic', hex: '#12939A', value: 10 },
-        { name: 'Prometheus', hex: '#12939A', value: 10 },
-        { name: 'SysDig', hex: '#12939A', value: 10 },
+        { name: 'New Relic', hex: '#11ABB0', value: 10 },
+        { name: 'Prometheus', hex: '#11ABB0', value: 10 },
+        { name: 'SysDig', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'CI/CD Tools',
+      hex: '#777777',
       children: [
-        { name: 'TravisCI', hex: '#12939A', value: 10 },
-        { name: 'CircleCI', hex: '#12939A', value: 10 },
-        { name: 'Jenkins', hex: '#12939A', value: 10 },
+        { name: 'TravisCI', hex: '#11ABB0', value: 10 },
+        { name: 'CircleCI', hex: '#11ABB0', value: 10 },
+        { name: 'Jenkins', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Platforms',
+      hex: '#777777',
       children: [
-        { name: 'GCP', hex: '#12939A', value: 10 },
-        { name: 'AWS', hex: '#12939A', value: 10 },
-        { name: 'Azure', hex: '#12939A', value: 10 },
-        { name: 'Digital Ocean', hex: '#12939A', value: 10 },
+        { name: 'GCP', hex: '#11ABB0', value: 10 },
+        { name: 'AWS', hex: '#11ABB0', value: 10 },
+        { name: 'Azure', hex: '#11ABB0', value: 10 },
+        { name: 'Digital Ocean', hex: '#11ABB0', value: 10 },
       ],
     },
     {
       name: 'Build Tools',
+      hex: '#777777',
       children: [
-        { name: 'Webpack', hex: '#12939A', value: 10 },
-        { name: 'Gulp', hex: '#12939A', value: 10 },
-        { name: 'Grunt', hex: '#12939A', value: 10 },
+        { name: 'Webpack', hex: '#11ABB0', value: 10 },
+        { name: 'Gulp', hex: '#11ABB0', value: 10 },
+        { name: 'Grunt', hex: '#11ABB0', value: 10 },
       ],
     },
   ],
@@ -165,58 +173,54 @@ export default class SkillsBreakdown extends React.Component<Props, State> {
             ? 'Click to unlock and keep exploring'
             : 'Hover and click to explorer my skills'}
         </div>
-        <div className="row justify-content-center">
-          <div className="col-12">
-            <Sunburst
-              className="diagram"
-              animation
-              hideRootNode
-              onValueMouseOver={node => {
-                if (clicked) {
-                  return;
-                }
-                const path = getKeyPath(node).reverse();
-                const pathAsMap = path.reduce((res, row) => {
-                  res[row] = true;
-                  return res;
-                }, {});
-                this.setState({
-                  finalValue: path[path.length - 1],
-                  pathValue: path.slice(1, path.length).join(' > '),
-                  data: updateData(decoratedData, pathAsMap),
-                });
-              }}
-              onValueMouseOut={() =>
-                clicked
-                  ? () => {}
-                  : this.setState({
-                      pathValue: false,
-                      finalValue: false,
-                      data: updateData(decoratedData, false),
-                    })
+        <div>
+          <Sunburst
+            className="diagram"
+            animation
+            hideRootNode
+            onValueMouseOver={node => {
+              if (clicked) {
+                return;
               }
-              onValueClick={() => this.setState({ clicked: !clicked })}
-              style={{
-                stroke: '#fff',
-                strokeOpacity: 0.3,
-                strokeWidth: '0.5',
-              }}
-              colorType="literal"
-              getSize={d => d.value}
-              getColor={d => d.hex}
-              data={data}
-              height={500}
-              width={500}
-            >
-              {finalValue && (
-                <LabelSeries
-                  data={[
-                    { x: 0, y: 0, label: finalValue, style: LABEL_STYLE },
-                  ]}
-                />
-              )}
-            </Sunburst>
-          </div>
+              const path = getKeyPath(node).reverse();
+              const pathAsMap = path.reduce((res, row) => {
+                res[row] = true;
+                return res;
+              }, {});
+              this.setState({
+                finalValue: path[path.length - 1],
+                pathValue: path.slice(1, path.length).join(' > '),
+                data: updateData(decoratedData, pathAsMap),
+              });
+            }}
+            onValueMouseOut={() =>
+              clicked
+                ? () => {}
+                : this.setState({
+                    pathValue: false,
+                    finalValue: false,
+                    data: updateData(decoratedData, false),
+                  })
+            }
+            onValueClick={() => this.setState({ clicked: !clicked })}
+            style={{
+              stroke: '#fff',
+              strokeOpacity: 0.3,
+              strokeWidth: '0.5',
+            }}
+            colorType="literal"
+            getSize={d => d.value}
+            getColor={d => d.hex}
+            data={data}
+            height={300}
+            width={300}
+          >
+            {finalValue && (
+              <LabelSeries
+                data={[{ x: 0, y: 0, label: finalValue, style: LABEL_STYLE }]}
+              />
+            )}
+          </Sunburst>
         </div>
         <div className="path">{pathValue}</div>
       </section>

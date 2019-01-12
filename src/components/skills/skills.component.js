@@ -10,8 +10,16 @@ export default function Skills() {
     <section id="skills">
       <div className="container">
         <h2>Skills</h2>
-        <SkillsBreakdown />
-        <SkillsDistribution />
+        <div className="row">
+          <div className="col-md-6">
+            <h1 className="subtitle">Breakdown</h1>
+            <SkillsBreakdown />
+          </div>
+          <div className="col-md-6">
+            <h1 className="subtitle">Distribution</h1>
+            <SkillsDistribution />
+          </div>
+        </div>
       </div>
     </section>
   );
