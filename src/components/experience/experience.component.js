@@ -62,7 +62,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'Software Engineer | Project Lead',
     description:
-      'Developed, supported and led team of technical and non-technical personnel supporting Integrate\'s PingTree platform. Also worked closely in the initiative to refactor existing system to a more distributed system.',
+      "Developed, supported and led team of technical and non-technical personnel supporting Integrate's PingTree platform. Also worked closely in the initiative to refactor existing system to a more distributed system.",
   },
   {
     title: 'Connexta',
