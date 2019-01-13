@@ -35,7 +35,7 @@ const experiences: ExperienceItem[] = [
     location: 'Mesa, AZ',
     position: 'Java Engineer',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Implemented and maintained enterprise correspondence system for Retail Assistance Corporation. This was my first introduction to Continuous Integration & Development and gave me the appreciation I share for CI/CD today.',
   },
   {
     title: 'ClickPoint Software',
@@ -44,7 +44,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'Software Engineer',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Delivered Lead Standardization with Postal Address Verification for automated lead distribution system, LeadExec. Refactored data layer for SalesExec Lead Manager Platform to use MongoDB.',
   },
   {
     title: 'SuperShuttle',
@@ -53,7 +53,7 @@ const experiences: ExperienceItem[] = [
     location: 'Phoenix, AZ',
     position: 'Software Engineer',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Led development effort on Booking Engine responsible for all reservation booking across several consumer facing applications used for SuperShuttle. I also was responsible for internationalization of the booking engine to 4 additional languages.',
   },
   {
     title: 'Integrate',
@@ -62,7 +62,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'Software Engineer | Project Lead',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Developed, supported and led team of technical and non-technical personnel supporting Integrate\'s PingTree platform. Also worked closely in the initiative to refactor existing system to a more distributed system.',
   },
   {
     title: 'Connexta',
@@ -71,7 +71,7 @@ const experiences: ExperienceItem[] = [
     location: 'Phoenix, AZ',
     position: 'Software Engineer',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Contributed to open source interoperability platform, Distributed Data Framework (DDF) providing secure and scalable discovery and retrieval from a wide array of disparate source',
   },
   {
     title: 'Swerve',
@@ -80,7 +80,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'CTO & Co-founder',
     description:
-      'Engineered a mobile vending platform allowing customers to have their food and beverage delivered directly to them from a single mobile application instead of being forced to download a new app at each venue they go to. No more waiting in lines and missing the action..',
+      'Engineered a mobile vending platform allowing consumers to have their food and beverage delivered directly to them using a mobile application from any sporting and entertainment venue. This was my first experience on the executive level of an organization and provided valuable insight into the technical and non-technical inner workings of a start-up.',
   },
   {
     title: 'Carvana',
@@ -89,7 +89,7 @@ const experiences: ExperienceItem[] = [
     location: 'Scottsdale, AZ',
     position: 'Distributed Systems Engineer III',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Refactored scheduling and purchasing system to utilize CQRS backed by an event store. During this time, I developed an appreciation for the impact architecture can play on the evolution of a scalable system.',
   },
   {
     title: 'CommercialTribe',
@@ -98,7 +98,7 @@ const experiences: ExperienceItem[] = [
     location: 'Denver, CO',
     position: 'Site Reliability Engineer | Sr. Software Engineer ',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium rutrum vulputate. Sed auctor tortor nec nibh ultricies cursus in vitae dui. Donec vel ligula vitae quam ultrices porttitor vitae a ligula.',
+      'Core contributor in containerization and migration of entire platform to Kubernetes. Our team leverages a CI/CD pipeline to isolated environments allowing frequent delivery of features. Additionally, led effort in introducing and practicing SRE discipline across engineering, which allows us to sustain a reliability target of ~5 minutes of total downtime per month.',
   },
 ];
 
