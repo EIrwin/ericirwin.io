@@ -9,6 +9,7 @@ spec:
   tls:
   - hosts:
     - ericirwin.io
+    - www.ericirwin.io
     secretName: letsencrypt-prod
   rules:
   - host: ericirwin.io
