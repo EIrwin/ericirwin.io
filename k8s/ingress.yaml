@@ -18,3 +18,9 @@ spec:
       - backend:
           serviceName: web
           servicePort: 80
+  - host: www.ericirwin.io
+    http:
+      paths:
+      - backend:
+          serviceName: web
+          servicePort: 80
