@@ -41,6 +41,7 @@ class Contact extends React.Component<Props, State> {
       // TODO submit contact form
     }
     const sparky = new SparkPost(Config.SparkPostKey);
+    console.log('Key: ', Config.SparkPostKey);
 
     sparky.transmissions
       .send({
