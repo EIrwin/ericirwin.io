@@ -1,6 +1,6 @@
 // @flow
-const { DefinePlugin } = require('webpack');
 const path = require('path');
+const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -10,7 +10,7 @@ const getEnvVar = (name, { optional } = { optional: false }) => {
   const envVar = process.env[name];
   if (!optional && !envVar) {
     throw new Error(
-      `Missing env var ${name} . Did you forget to add it to a .env file or the Dockerfile?`
+      `Missing env var ${name} . Did you forget to add it to a .env file or the Dockerfile?`,
     );
   }
 
