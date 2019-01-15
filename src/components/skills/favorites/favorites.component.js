@@ -50,6 +50,14 @@ const data: Favorite[] = [
     title: 'Webpack',
     imageSrc: `${BASE_IMAGE_PATH}/webpack.png`,
   },
+  {
+    title: 'GraphQL',
+    imageSrc: `${BASE_IMAGE_PATH}/graphql.png`,
+  },
+  {
+    title: 'Relay',
+    imageSrc: `${BASE_IMAGE_PATH}/relay.png`,
+  },
 ];
 
 export default function Favorites() {
