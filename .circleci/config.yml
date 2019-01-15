@@ -46,7 +46,7 @@ jobs:
     - run:
         name: Docker Build & Push
         command: |
-          docker build -t $CIRCLE_PROJECT_REPONAME .
+          docker build --build-arg SPARKPOST_KEY=$SPARKPOST_KEY -t $CIRCLE_PROJECT_REPONAME .
           docker tag $CIRCLE_PROJECT_REPONAME docker.io/eirwin/$CIRCLE_PROJECT_REPONAME:$CIRCLE_SHA1
           docker tag $CIRCLE_PROJECT_REPONAME docker.io/eirwin/$CIRCLE_PROJECT_REPONAME:latest
           docker login -u $DOCKER_LOGIN_USERNAME --password $DOCKER_LOGIN_PASSWORD

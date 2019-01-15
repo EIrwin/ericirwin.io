@@ -1,8 +1,21 @@
 // @flow
+const { DefinePlugin } = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const merge = require('webpack-merge');
+
+const getEnvVar = (name, { optional } = { optional: false }) => {
+  const envVar = process.env[name];
+  if (!optional && !envVar) {
+    throw new Error(
+      `Missing env var ${name} . Did you forget to add it to a .env file or the Dockerfile?`
+    );
+  }
+
+  return JSON.stringify(envVar);
+};
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -44,6 +57,9 @@ const config = {
     extensions: ['*', '.js'],
   },
   plugins: [
+    new DefinePlugin({
+      SPARKPOST_KEY: getEnvVar('SPARKPOST_KEY'),
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       inject: 'body',
