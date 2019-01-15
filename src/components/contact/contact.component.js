@@ -49,8 +49,7 @@ class Contact extends React.Component<Props, State> {
         content: {
           from: 'contact@ericirwin.io',
           subject: 'Contact Form Request',
-          html:
-            '<html><body><p>{body}</p></body></html>',
+          html: '<html><body><p>{body}</p></body></html>',
         },
         recipients: [{ address: 'Eric.Irwin1124@gmail.com' }],
       })
