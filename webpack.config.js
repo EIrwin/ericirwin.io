@@ -20,6 +20,11 @@ const getEnvVar = (name, { optional } = { optional: false }) => {
 const isProduction = process.env.NODE_ENV === 'production';
 
 const config = {
+  node: {
+    fs: 'empty',
+    tls: 'empty',
+    net: 'empty',
+  },
   output: {
     publicPath: '/',
   },
