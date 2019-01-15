@@ -7,7 +7,7 @@
     "build:dev": "cross-env NODE_ENV=development SPARKPOST_KEY=$SPARKPOST_KEY webpack",
     "dev": "yarn run build:dev && yarn run serve:dev",
     "serve:build": "npm run build && node server.js",
-    "serve:dev": "cross-env NODE_ENV=development node server.js",
+    "serve:dev": "cross-env NODE_ENV=development SPARKPOST_KEY=$SPARKPOST_KEY node server.js",
     "serve": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production node server.js",
     "lint": "eslint *.js src"
   },
