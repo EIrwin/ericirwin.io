@@ -106,7 +106,7 @@ const experiences: ExperienceItem[] = [
     position: 'Site Reliability Engineer | Sr. Software Engineer ',
     description:
       'Core contributor in containerization and migration of entire platform to Kubernetes. Our team leverages a CI/CD pipeline to isolated environments allowing frequent delivery of features. Additionally, led effort in introducing and practicing SRE discipline across engineering, which allows us to sustain a reliability target of ~5 minutes of total downtime per month.',
-    keywords: ['Kubernetes', 'Golang', 'Docker', 'NodeJS', 'React', 'Typescript', 'React Native', 'MongoDB', 'Postgres', 'Google Cloud', 'AWS'],
+    keywords: ['Kubernetes', 'Golang', 'Docker', 'NodeJS', 'GraphQL', 'Relay', 'React', 'Typescript', 'React Native', 'MongoDB', 'Postgres', 'Google Cloud', 'AWS', 'Redis'],
   },
 ];
 
