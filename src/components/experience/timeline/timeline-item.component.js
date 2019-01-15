@@ -51,7 +51,9 @@ export default function TimelineItem({ inverted, experience }: Props) {
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
-        {keywords ? <Chips alignment={inverted ? 'left' : 'right'} values={keywords}/> : null}
+        {keywords ? (
+          <Chips alignment={inverted ? 'left' : 'right'} values={keywords} />
+        ) : null}
       </div>
     </li>
   );
