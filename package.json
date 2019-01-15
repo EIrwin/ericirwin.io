@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "https://ericirwin.io",
   "scripts": {
-    "build": "webpack --config webpack.production.js --progress --profile --colors",
+    "build": "cross-env SPARKPOST_KEY=$SPARKPOST_KEY webpack --config webpack.production.js --progress --profile --colors",
     "build:dev": "cross-env NODE_ENV=development SPARKPOST_KEY=$SPARKPOST_KEY webpack",
     "dev": "yarn run build:dev && yarn run serve:dev",
-    "serve:build": "npm run build && node server.js",
+    "serve:build": "cross-env SPARKPOST_KEY=$SPARKPOST_KEY npm run build && node server.js",
     "serve:dev": "cross-env NODE_ENV=development SPARKPOST_KEY=$SPARKPOST_KEY node server.js",
     "serve": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production node server.js",
     "lint": "eslint *.js src"
