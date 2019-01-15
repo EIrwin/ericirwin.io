@@ -17,7 +17,7 @@ const experiences: ExperienceItem[] = [
     location: 'Charleston, SC',
     position: 'Bachelor of Science | Computer Science',
     description:
-      'Graduated with honors (Cum Laude) in three years with a degree in Computer Science and a Minor in Management Information Systems.',
+      'Graduated with honors (Cum Laude) in three years with a BS. in Computer Science and a Minor in Management Information Systems.',
   },
   {
     title: 'Arizona State University',
@@ -36,6 +36,7 @@ const experiences: ExperienceItem[] = [
     position: 'Java Engineer',
     description:
       'Implemented and maintained enterprise correspondence system for Retail Assistance Corporation. This was my first introduction to Continuous Integration & Development and gave me the appreciation I share for CI/CD today.',
+    keywords: ['Java', 'Spring', 'MySQL', 'Jenkins', 'Maven'],
   },
   {
     title: 'ClickPoint Software',
@@ -45,6 +46,7 @@ const experiences: ExperienceItem[] = [
     position: 'Software Engineer',
     description:
       'Delivered Lead Standardization with Postal Address Verification for automated lead distribution system, LeadExec. Refactored data layer for SalesExec Lead Manager Platform to use MongoDB.',
+    keywords: ['C#', '.NET', 'SQL Server', 'MongoDB', 'WPF', 'WCF'],
   },
   {
     title: 'SuperShuttle',
@@ -54,6 +56,7 @@ const experiences: ExperienceItem[] = [
     position: 'Software Engineer',
     description:
       'Led development effort on Booking Engine responsible for all reservation booking across several consumer facing applications used for SuperShuttle. I also was responsible for internationalization of the booking engine to 4 additional languages.',
+    keywords: ['C#', '.NET', 'SQL Server', 'MongoDB', 'WPF', 'WCF'],
   },
   {
     title: 'Integrate',
@@ -63,6 +66,7 @@ const experiences: ExperienceItem[] = [
     position: 'Software Engineer | Project Lead',
     description:
       "Developed, supported and led team of technical and non-technical personnel supporting Integrate's PingTree platform. Also worked closely in the initiative to refactor existing system to a more distributed system.",
+    keywords: ['C#', 'Docker', 'NGINX', 'MongoDB', 'RabbitMQ', '.NET', 'Git', 'SQL Server', 'WCF', 'Redis'],
   },
   {
     title: 'Connexta',
@@ -72,6 +76,7 @@ const experiences: ExperienceItem[] = [
     position: 'Software Engineer',
     description:
       'Contributed to open source interoperability platform, Distributed Data Framework (DDF) providing secure and scalable discovery and retrieval from a wide array of disparate source',
+    keywords: ['Java', 'Jenkins', 'Maven', 'Docker', 'Karaf', 'DDF', 'CXF', 'Solr'],
   },
   {
     title: 'Swerve',
@@ -81,6 +86,7 @@ const experiences: ExperienceItem[] = [
     position: 'CTO & Co-founder',
     description:
       'Engineered a mobile vending platform allowing consumers to have their food and beverage delivered directly to them using a mobile application from any sporting and entertainment venue. This was my first experience on the executive level of an organization and provided valuable insight into the technical and non-technical inner workings of a start-up.',
+    keywords: ['Docker', 'Golang', 'C#', 'RabbitMQ', 'MongoDB', 'Redis', '.NET', 'AWS', 'NancyFX', 'Angular', 'NGINX', 'HAProxy', 'SNS'],
   },
   {
     title: 'Carvana',
@@ -90,6 +96,7 @@ const experiences: ExperienceItem[] = [
     position: 'Distributed Systems Engineer III',
     description:
       'Refactored scheduling and purchasing system to utilize CQRS backed by an event store. During this time, I developed an appreciation for the impact architecture can play on the evolution of a scalable system.',
+    keywords: ['Docker', 'Golang',  'C#', 'Angular', 'MongoDB', 'SQL Server', 'Webpack'],
   },
   {
     title: 'CommercialTribe',
@@ -99,6 +106,7 @@ const experiences: ExperienceItem[] = [
     position: 'Site Reliability Engineer | Sr. Software Engineer ',
     description:
       'Core contributor in containerization and migration of entire platform to Kubernetes. Our team leverages a CI/CD pipeline to isolated environments allowing frequent delivery of features. Additionally, led effort in introducing and practicing SRE discipline across engineering, which allows us to sustain a reliability target of ~5 minutes of total downtime per month.',
+    keywords: ['Kubernetes', 'Golang', 'Docker', 'NodeJS', 'React', 'Typescript', 'React Native', 'MongoDB', 'Postgres', 'Google Cloud', 'AWS'],
   },
 ];
 
@@ -122,7 +130,7 @@ export default function Experience() {
         <div className="row">
           <div className="col-lg-12">
             <ul className="timeline">
-              {experiences.map(renderItem)}
+              {experiences.reverse().map(renderItem)}
               <li
                 className={classNames('timeline-inverted', 'timeline-final')}
               >

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import classNames from 'classnames';
+import { Chips } from '../../common/chips/';
 
 export type ExperienceItem = {
   duration: string,
@@ -9,6 +10,7 @@ export type ExperienceItem = {
   description: string,
   position?: string,
   imageSrc: string,
+  keywords?: string[],
 };
 
 type Props = {
@@ -24,6 +26,7 @@ export default function TimelineItem({ inverted, experience }: Props) {
     duration,
     description,
     title,
+    keywords,
   } = experience;
   return (
     <li className={inverted ? 'timeline-inverted' : ''}>
@@ -48,6 +51,7 @@ export default function TimelineItem({ inverted, experience }: Props) {
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
+        {keywords ? <Chips alignment={inverted ? 'left' : 'right'} values={keywords}/> : null}
       </div>
     </li>
   );
