@@ -46,12 +46,11 @@ class Contact extends React.Component<Props, State> {
 
     sparky.transmissions
       .send({
-        options: { sandbox: true },
         content: {
-          from: 'testing@sparkpostbox.com',
-          subject: 'Oh hey',
+          from: 'contact@ericirwin.io',
+          subject: 'Contact Form Request',
           html:
-            '<html><body><p>Testing SparkPost - the most awesomest email service!</p></body></html>',
+            '<html><body><p>{body}</p></body></html>',
         },
         recipients: [{ address: 'Eric.Irwin1124@gmail.com' }],
       })

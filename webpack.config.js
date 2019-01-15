@@ -19,6 +19,8 @@ const getEnvVar = (name, { optional } = { optional: false }) => {
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+console.log(process.env);
+
 const config = {
   node: {
     fs: 'empty',
