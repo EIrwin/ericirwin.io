@@ -51,7 +51,7 @@ class Contact extends React.Component<Props, State> {
           html:
             '<html><body><p>Testing SparkPost - the most awesomest email service!</p></body></html>',
         },
-        recipients: [{ address: 'developers+nodejs@sparkpost.com' }],
+        recipients: [{ address: 'Eric.Irwin1124@gmail.com' }],
       })
       .then(data => {
         console.log('Woohoo! You just sent your first mailing!');

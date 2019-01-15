@@ -2,5 +2,5 @@
 
 // the values here are provided through injection
 export default {
-  SparkPostKey: SPARKPOST_KEY,
+  SparkPostKey: process.env.SPARKPOST_KEY,
 };
