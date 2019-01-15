@@ -30,3 +30,8 @@ declare module 'react-vis' {
 declare module 'classnames' {
   declare module.exports: any;
 }
+
+
+declare module 'sparkpost' {
+  declare module.exports: any;
+}
