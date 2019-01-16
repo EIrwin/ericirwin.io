@@ -11,7 +11,7 @@ type State = {
   body: string,
   email: string,
   subject: string,
-  error: ?string,
+  status: ?string,
 };
 
 class Contact extends React.Component<Props, State> {
@@ -20,10 +20,10 @@ class Contact extends React.Component<Props, State> {
     body: '',
     email: '',
     subject: '',
-    error: null,
+    status: null,
   };
 
-  handleSubmit = (e: any) => {
+  handleSubmit = async (e: any) => {
     e.preventDefault();
     const { name, body, email, subject } = this.state;
 
@@ -33,20 +33,52 @@ class Contact extends React.Component<Props, State> {
     else if (!subject) error = 'Please enter Subject';
     else if (!body) error = 'Please enter Message';
 
-    this.setState({ error });
+    this.setState({ status });
 
     if (!error) {
-      // TODO submit contact form
-    }
+      const data = {
+        name,
+        body,
+        email,
+        subject,
+      };
 
-    return fetch('/contact', {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    })
+      try {
+        const resp = await fetch('/contact', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (resp.status !== 200) {
+          this.handleError();
+        } else {
+          this.handleSuccess();
+        }
+      } catch (err) {
+        this.handleError();
+      }
+    }
+  };
+
+  handleSuccess = () => {
+    this.setState({
+      name: '',
+      body: '',
+      email: '',
+      subject: '',
+      status: 'Message Sent!',
+    });
+  };
+
+  handleError = () => {
+    this.setState({ status: 'Unable to send contact request at this time' });
   };
 
   render() {
-    const { error } = this.state;
+    const { status } = this.state;
     return (
       <section id="contact">
         <div className="container">
@@ -139,7 +171,7 @@ class Contact extends React.Component<Props, State> {
               <div className="row form-group">
                 <div className="col-sm-4" />
                 <div className="col">
-                  <p className="help-block error">{error}</p>
+                  <p className="help-block error">{status}</p>
                 </div>
               </div>
             </div>
