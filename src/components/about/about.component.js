@@ -41,7 +41,7 @@ export default function About() {
                 Masters of Science Engineering in Software Engineering
               </b>{' '}
               from
-              <b> Arizona Status University</b>.
+              <b> Arizona State University</b>.
             </p>
             <p>
               In October 2016, I started my current role as{' '}

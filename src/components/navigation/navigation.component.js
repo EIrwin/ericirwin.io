@@ -22,12 +22,12 @@ const links: NavLink[] = [
     label: 'About',
   },
   {
-    target: 'experience',
-    label: 'Experience',
-  },
-  {
     target: 'skills',
     label: 'Skills',
+  },
+  {
+    target: 'experience',
+    label: 'Experience',
   },
   {
     target: 'contact',

@@ -3,8 +3,6 @@ import * as React from 'react';
 import './contact.css';
 import isEmail from 'validator/lib/isEmail';
 import SocialNetworks from '../social/social-networks.component';
-import Config from '../../config';
-const SparkPost = require('sparkpost');
 
 type Props = {};
 
@@ -41,24 +39,10 @@ class Contact extends React.Component<Props, State> {
       // TODO submit contact form
     }
 
-    console.log('Key: ', Config.SparkPostKey);
-    const sparky = new SparkPost(Config.SparkPostKey);
-
-    sparky.transmissions
-      .send({
-        content: {
-          from: 'contact@ericirwin.io',
-          subject: 'Contact Form Request',
-          html: '<html><body><p>{body}</p></body></html>',
-        },
-        recipients: [{ address: 'Eric.Irwin1124@gmail.com' }],
-      })
-      .then(data => {
-        console.log('Woohoo! You just sent your first mailing!');
-      })
-      .catch(err => {
-        console.log('Whoops! Something went wrong');
-      });
+    return fetch('/contact', {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    })
   };
 
   render() {
