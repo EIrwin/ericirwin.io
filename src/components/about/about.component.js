@@ -52,7 +52,7 @@ export default function About() {
             <p>
               I have been extremely fortunate in my career to have been given
               the opportunities to work with so many talented engineers and
-              innovated teams that have helped mold me into the <b>Engineer</b>{' '}
+              innovative teams that have helped mold me into the <b>Engineer</b>{' '}
               and <b>Leader</b> I am today.
             </p>
             <p>
