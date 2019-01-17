@@ -39,9 +39,8 @@ const AppComponent = () => {
         <meta property="og:url" content="https://ericirwin.io" />
         <meta property="og:type" content="website" />
         <meta
-          data-react-helmet="true"
           property="og:image"
-          content="https://ericirwin.io/public/images/header.jpg"
+          content="https://avatars0.githubusercontent.com/u/6673161?s=460&v=4"
         />
       </Helmet>
       <Navigation />
