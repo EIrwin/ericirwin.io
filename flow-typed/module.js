@@ -35,3 +35,12 @@ declare module 'classnames' {
 declare module 'sparkpost' {
   declare module.exports: any;
 }
+
+declare module 'react-helmet' {
+  declare module.exports: any;
+}
+
+declare module 'react-ga' {
+  declare module.exports: any;
+}
+
