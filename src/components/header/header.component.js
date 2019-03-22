@@ -18,9 +18,7 @@ export default function Header() {
         </div>
         <div className="scrollDown">
           <ScrollLink to="about">
-            <a>
-              <i className="icon-down-circle" />
-            </a>
+            <i className="icon-down-circle" />
           </ScrollLink>
         </div>
       </div>

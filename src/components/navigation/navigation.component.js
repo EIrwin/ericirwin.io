@@ -70,11 +70,11 @@ export default class Navigation extends React.Component<{}, State> {
   render() {
     const { shrink } = this.state;
     return (
-      <nav id="nav" className={shrink && 'navbar-shrink'}>
+      <nav id="nav" className={shrink ? 'navbar-shrink' : ''}>
         <ul className="navigation">
           {links.map(link => {
             return (
-              <li>
+              <li key={link.label}>
                 <ScrollLink to={link.target} activeClass="active" spy>
                   {link.label}
                 </ScrollLink>

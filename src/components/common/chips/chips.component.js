@@ -11,7 +11,11 @@ type Props = {
 export default function Chips(props: Props) {
   const { values, alignment } = props;
   const renderChip = (value: string) => {
-    return <span className="chip">{value}</span>;
+    return (
+      <span key={value} className="chip">
+        {value}
+      </span>
+    );
   };
 
   return (
