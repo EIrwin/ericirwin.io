@@ -93,105 +93,92 @@ const tipStyle = {
   padding: '5px',
 };
 
-type Props = {};
-
-type State = {
-  hoveredCell: any,
-};
-
-export default class RadarChartWithTooltips extends Component<Props, State> {
-  state = {
-    hoveredCell: false,
-  };
-
-  render() {
-    const { hoveredCell } = this.state;
-
-    return (
-      <section id="skills-distribution">
-        <div className="row justify-content-center">
-          <RadarChart
-            className="chart"
-            data={DATA}
-            tickFormat={t => {
-              return '';
-            }}
-            domains={[
-              {
-                name: 'Backend',
-                domain: [0, 5],
-                tickFormat: t => {
-                  if (t < 5 && t > 0) {
-                    return Math.round(t);
-                  }
-                  return '';
-                },
+export default function RadarChartWithTooltips() {
+  const [hoveredCell, setHoveredCell] = React.useState(false);
+  return (
+    <section id="skills-distribution">
+      <div className="row justify-content-center">
+        <RadarChart
+          className="chart"
+          data={DATA}
+          tickFormat={t => {
+            return '';
+          }}
+          domains={[
+            {
+              name: 'Backend',
+              domain: [0, 5],
+              tickFormat: t => {
+                if (t < 5 && t > 0) {
+                  return Math.round(t);
+                }
+                return '';
               },
-              {
-                name: 'Frontend',
-                domain: [0, 5],
-                getValue: d => d.Frontend,
-              },
-              { name: 'Ops', domain: [0, 5], getValue: d => d.Ops },
-              {
-                name: 'Database',
-                domain: [0, 5],
-                getValue: d => d.Database,
-              },
-              { name: 'Tools', domain: [0, 5], getValue: d => d.Tools },
-              {
-                name: 'Platforms',
-                domain: [0, 5],
-                getValue: d => d.Platforms,
-              },
-            ]}
-            width={375}
-            height={375}
-            margin={{ top: 50, right: 50, bottom: 50, left: 50 }}
-            onValueMouseOver={v => {
-              this.setState({ hoveredCell: v });
-            }}
-            onValueMouseOut={v => this.setState({ hoveredCell: false })}
-            style={{
-              polygons: {
-                stroke: '#ccc',
-                strokeWidth: 1,
+            },
+            {
+              name: 'Frontend',
+              domain: [0, 5],
+              getValue: d => d.Frontend,
+            },
+            { name: 'Ops', domain: [0, 5], getValue: d => d.Ops },
+            {
+              name: 'Database',
+              domain: [0, 5],
+              getValue: d => d.Database,
+            },
+            { name: 'Tools', domain: [0, 5], getValue: d => d.Tools },
+            {
+              name: 'Platforms',
+              domain: [0, 5],
+              getValue: d => d.Platforms,
+            },
+          ]}
+          width={375}
+          height={375}
+          margin={{ top: 50, right: 50, bottom: 50, left: 50 }}
+          onValueMouseOver={v => {
+            setHoveredCell(v);
+          }}
+          onValueMouseOut={() => setHoveredCell(false)}
+          style={{
+            polygons: {
+              stroke: '#ccc',
+              strokeWidth: 1,
+              strokeOpacity: 0.8,
+              fillOpacity: 0.6,
+            },
+            labels: {
+              textAnchor: 'middle',
+              fill: '#fff',
+              margin: '20px;',
+            },
+            axes: {
+              line: {
+                stroke: '#fff',
+                fillOpacity: 0.8,
+                strokeWidth: 1.5,
                 strokeOpacity: 0.8,
-                fillOpacity: 0.6,
               },
-              labels: {
-                textAnchor: 'middle',
-                fill: '#fff',
-                margin: '20px;',
+              ticks: {
+                fillOpacity: 0,
+                strokeOpacity: 0,
               },
-              axes: {
-                line: {
-                  stroke: '#fff',
-                  fillOpacity: 0.8,
-                  strokeWidth: 1.5,
-                  strokeOpacity: 0.8,
-                },
-                ticks: {
-                  fillOpacity: 0,
-                  strokeOpacity: 0,
-                },
-                text: {},
-              },
-            }}
-            colorRange={['transparent']}
-            hideInnerMostValues={false}
-            renderAxesOverPolygons={true}
-          >
-            {hoveredCell && hoveredCell.dataName === 'Skills' && (
-              <Hint value={hoveredCell}>
-                <div style={tipStyle}>
-                  {hoveredCell.domain}: {hoveredCell.value}
-                </div>
-              </Hint>
-            )}
-          </RadarChart>
-        </div>
-      </section>
-    );
-  }
+              text: {},
+            },
+          }}
+          colorRange={['transparent']}
+          hideInnerMostValues={false}
+          renderAxesOverPolygons={true}
+        >
+          {hoveredCell && hoveredCell.dataName === 'Skills' && (
+            <Hint value={hoveredCell}>
+              <div style={tipStyle}>
+                {hoveredCell.domain}: {hoveredCell.value}
+              </div>
+            </Hint>
+          )}
+        </RadarChart>
+      </div>
+    </section>
+  );
 }
