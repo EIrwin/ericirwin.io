@@ -19,7 +19,7 @@ export default function About() {
           <div className="col-sm-4 text-center">
             <img
               className="profile-pic"
-              src={`https://avatars0.githubusercontent.com/u/6673161?s=400&u=abda4bf288c76289efe4129fba01ae34a1620ea1&v=4`}
+              src={`https://avatars2.githubusercontent.com/u/6673161?s=400&u=eae6f22d3d0671db6bfd4225a524b5dfd4829a1c&v=4`}
               alt="Eric Irwin Profile Pic"
             />
           </div>
