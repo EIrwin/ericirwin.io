@@ -172,8 +172,8 @@ const experiences: ExperienceItem[] = [
     location: 'Denver, CO',
     position: 'Director of Engineering',
     description:
-      'Enthusiastic engineer, leader and learner with a passion for professional and personal development.' +
-      'I believe that highly functioning organizations start at its foundation. Optimizing for transparency ensures teams and individuals possess a deep understanding of larger organizational initiatives.' +
+      'Enthusiastic engineer, leader and learner with a passion for professional and personal development. ' +
+      'I believe that highly functioning organizations start at its foundation. Optimizing for transparency ensures teams and individuals possess a deep understanding of larger organizational initiatives. ' +
       'I care deeply about continuous improvement to how teams build, release and iterate on products they own.',
     keywords: [
       'NodeJS',
