@@ -142,7 +142,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     title: 'CommercialTribe',
-    duration: 'FALL 2016 - PRESENT',
+    duration: 'FALL 2016 - SPRING 2019',
     imageSrc: `${BASE_IMAGE_PATH}/commercialtribe.png`,
     location: 'Denver, CO',
     position: 'Site Reliability Engineer | Sr. Software Engineer ',
@@ -163,6 +163,28 @@ const experiences: ExperienceItem[] = [
       'Google Cloud',
       'AWS',
       'Redis',
+    ],
+  },
+  {
+    title: 'Quantum Metric',
+    duration: 'SPRING 2019 - PRESENT',
+    imageSrc: `${BASE_IMAGE_PATH}/quantummetric.png`,
+    location: 'Denver, CO',
+    position: 'Director of Engineering',
+    description:
+      'Enthusiastic engineer, leader and learner with a passion for professional and personal development.' +
+      'I believe that highly functioning organizations start at its foundation. Optimizing for transparency ensures teams and individuals possess a deep understanding of larger organizational initiatives.' +
+      'I care deeply about continuous improvement to how teams build, release and iterate on products they own.',
+    keywords: [
+      'NodeJS',
+      'React',
+      'Kubernetes',
+      'Golang',
+      'Typescript',
+      'Docker',
+      'GraphQL',
+      'Postgres',
+      'Google Cloud',
     ],
   },
 ];
