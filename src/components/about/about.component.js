@@ -44,10 +44,8 @@ export default function About() {
               <b> Arizona State University</b>.
             </p>
             <p>
-              In October 2016, I started my current role as{' '}
-              <b>Senior Software Engineer/Site Reliability Engineer</b> at{' '}
-              <b>CommercialTribe</b> and relocated to beautiful{' '}
-              <b>Denver, Colorado</b>.
+              In March 2019, I started my current role as{' '}
+              <b>Director of Engineering</b> at <b>Quantum Metric</b>.
             </p>
             <p>
               I have been extremely fortunate in my career to have been given
