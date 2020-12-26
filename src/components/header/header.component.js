@@ -11,7 +11,7 @@ export default function Header() {
         <div className="intro">
           <h1>{`I'm Eric Irwin`}</h1>
           <h3>
-            {`I'm a Denver based Senior Software Engineer who is passionate about technology and delivering impactful results.`}
+            {`Experienced engineer, leader and continuous learner with a passion for Continuous Delivery and all things Delivery Engineering.`}
           </h3>
           <hr />
           <SocialNetworks />
