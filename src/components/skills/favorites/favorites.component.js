@@ -19,6 +19,14 @@ const data: Favorite[] = [
     imageSrc: `${BASE_IMAGE_PATH}/golang.png`,
   },
   {
+    title: 'Spinnaker',
+    imageSrc: `${BASE_IMAGE_PATH}/spinnaker.png`,
+  },
+  {
+    title: 'GitLab',
+    imageSrc: `${BASE_IMAGE_PATH}/gitlab.png`,
+  },
+  {
     title: 'ReactJS',
     imageSrc: `${BASE_IMAGE_PATH}/react.png`,
   },
@@ -41,14 +49,6 @@ const data: Favorite[] = [
   {
     title: 'PostgresSQL',
     imageSrc: `${BASE_IMAGE_PATH}/postgres.png`,
-  },
-  {
-    title: 'Redis',
-    imageSrc: `${BASE_IMAGE_PATH}/redis.png`,
-  },
-  {
-    title: 'Webpack',
-    imageSrc: `${BASE_IMAGE_PATH}/webpack.png`,
   },
   {
     title: 'GraphQL',
