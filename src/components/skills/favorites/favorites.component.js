@@ -43,8 +43,8 @@ const data: Favorite[] = [
     imageSrc: `${BASE_IMAGE_PATH}/gcp.png`,
   },
   {
-    title: 'MongoDB',
-    imageSrc: `${BASE_IMAGE_PATH}/mongo.png`,
+    title: 'Terraform',
+    imageSrc: `${BASE_IMAGE_PATH}/terraform.png`,
   },
   {
     title: 'PostgresSQL',
