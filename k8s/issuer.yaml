@@ -1,4 +1,4 @@
-apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
@@ -17,4 +17,4 @@ spec:
           ingress:
             class: nginx
     # Enable the HTTP-01 challenge provider
-    http01: {}
+    # http01: {}
