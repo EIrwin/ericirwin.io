@@ -176,6 +176,10 @@ const experiences: ExperienceItem[] = [
       'I believe that highly functioning organizations start at its foundation. Optimizing for transparency ensures teams and individuals possess a deep understanding of larger organizational initiatives. ' +
       'I care deeply about continuous improvement to how teams build, release and iterate on products they own.',
     keywords: [
+      'Spinnaker',
+      'Terraform',
+      'GitLab',
+      'BigQuery',
       'NodeJS',
       'React',
       'Kubernetes',
