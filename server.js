@@ -5,6 +5,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 const SPARKPOST_KEY = process.env.SPARKPOST_KEY;
 const SPARKPOST_SENDER_EMAIL = 'contact@ericirwin.io';
 
+let votes = 0;
+
 if (isProduction) {
   const express = require('express');
   const app = express();
@@ -29,6 +31,15 @@ if (isProduction) {
     } catch (err) {
       res.status(500).json({ message: 'An error occurred' });
     }
+  });
+
+  app.post('/api/v1/stfu', async (req, res) => {
+    votes++;
+    res.status(200).json({ status: 'ok', votes });
+  });
+
+  app.get('/api/v1/stfu', async (req, res) => {
+    res.status(200).json({ status: 'ok', votes });
   });
 
   // $FlowFixMe

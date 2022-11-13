@@ -62,9 +62,6 @@ const config = {
     extensions: ['*', '.js'],
   },
   plugins: [
-    new DefinePlugin({
-      SPARKPOST_KEY: getEnvVar('SPARKPOST_KEY'),
-    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       inject: 'body',

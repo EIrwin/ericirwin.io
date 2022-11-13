@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "https://ericirwin.io",
   "scripts": {
-    "build": "cross-env-shell NODE_ENV=production SPARKPOST_KEY=$SPARKPOST_KEY webpack --config webpack.production.js --progress --profile --colors",
-    "build:dev": "cross-env-shell SPARKPOST_KEY=$SPARKPOST_KEY NODE_ENV=development webpack",
+    "build": "cross-env-shell NODE_ENV=production webpack --config webpack.production.js --progress --profile --colors",
+    "build:dev": "cross-env-shell NODE_ENV=development webpack",
     "dev": "yarn run build:dev && yarn run serve:dev",
-    "serve:build": "cross-env-shell NODE_ENV=production SPARKPOST_KEY=$SPARKPOST_KEY npm run build && node server.js",
-    "serve:dev": "cross-env-shell NODE_ENV=development SPARKPOST_KEY=$SPARKPOST_KEY node server.js",
+    "serve:build": "cross-env-shell NODE_ENV=production  npm run build && node server.js",
+    "serve:dev": "cross-env-shell NODE_ENV=development node server.js",
     "serve": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production node server.js",
     "lint": "eslint *.js src"
   },
@@ -41,6 +41,7 @@
     "react-hot-loader": "^4.3.12",
     "react-scroll": "^1.7.10",
     "react-vertical-timeline-component": "^2.3.1",
+    "react-router-dom": "6.4.3",
     "react-vis": "^1.11.5",
     "sparkpost": "^2.1.2",
     "validator": "^10.9.0"
@@ -82,7 +83,7 @@
     "koa-send": "^5.0.0",
     "loglevel": "^1.6.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "react-router-dom": "^4.2.2",
+    "react-router-dom": "6.4.3",
     "react-router-redux": "^4.0.8",
     "react-test-renderer": "^16.2.0",
     "style-loader": "^0.23.1",

@@ -10,9 +10,10 @@ spec:
     - hosts:
         - ericirwin.io
         - www.ericirwin.io
+        - stfu.ericirwin.io
       secretName: letsencrypt-prod
   rules:
-    - host: ericirwin.io
+    - host: "ericirwin.io"
       http:
         paths:
           - backend:
@@ -23,7 +24,18 @@ spec:
                 name: web
                 port:
                   number: 80
-    - host: www.ericirwin.io
+    - host: "ericirwin.io"
+      http:
+        paths:
+          - backend:
+            path: "/stfu"
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80
+    - host: "www.ericirwin.io"
       http:
         paths:
           - backend:

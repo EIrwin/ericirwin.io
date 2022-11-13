@@ -1,0 +1,79 @@
+#stfu {
+    background: #191919;
+    padding-top: 96px;
+    padding-bottom: 66px;
+    overflow: hidden;
+  }
+  
+  #stfu h2 {
+    font: 40px 'opensans-bold', sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #stfu p.subheading {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  #stfu {
+    background: #191919;
+    padding-top: 64px;
+    padding-bottom: 102px;
+    color: #898787;
+  }
+  
+  #stfu h1 {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+  }
+  
+  #stfu h1 span { display: none; }
+  #stfu h1:before {
+    font-family: 'FontAwesome';
+    content: "\f0e0";
+    padding-right: 10px;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: left;
+    float: left;
+    color: #ebeeee;
+  }
+  
+  #stfu h4 {
+    font: 16px/24px 'opensans-bold', sans-serif;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+  }
+
+  #stfu button.stfu {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:#fff;
+    background: #c5005aed;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    display: inline-block;
+    border-radius: 3px;
+    width: 100%;
+    padding: 12px 20px;
+  }
+  #stfu button.stfu:hover {
+    color: #0D0D0D;
+    background: #fff;
+  }
+
+  #stfu .profile-pic {
+    width: 75%; 
+    margin: 16px;
+    border-radius: 100%;
+    border: 7px solid white;
+  }
+
+  #stfu .row { 
+    text-align: center;
+  }
