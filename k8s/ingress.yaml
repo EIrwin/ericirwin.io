@@ -1,26 +1,36 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web
   annotations:
-    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  ingressClassName: nginx
   tls:
-  - hosts:
-    - ericirwin.io
-    - www.ericirwin.io
-    secretName: letsencrypt-prod
+    - hosts:
+        - ericirwin.io
+        - www.ericirwin.io
+      secretName: letsencrypt-prod
   rules:
-  - host: ericirwin.io
-    http:
-      paths:
-      - backend:
-          serviceName: web
-          servicePort: 80
-  - host: www.ericirwin.io
-    http:
-      paths:
-      - backend:
-          serviceName: web
-          servicePort: 80
+    - host: ericirwin.io
+      http:
+        paths:
+          - backend:
+            path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80
+    - host: www.ericirwin.io
+      http:
+        paths:
+          - backend:
+            path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80
