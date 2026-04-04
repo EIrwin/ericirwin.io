@@ -16,21 +16,21 @@ title = 'Eric Irwin'
 
 [menu]
   [[menu.header]]
-    name = "about"
-    weight = 0
-    url = "/about"
-  [[menu.header]]
-    name = "experience"
-    weight = 1
-    url = "/experience"
-  [[menu.header]]
     name = "blog"
-    weight = 2
+    weight = 1
     url = "/posts"
   [[menu.header]]
     name = "featured"
-    weight = 3
+    weight = 2
     url = "/featured"
+  [[menu.header]]
+    name = "experience"
+    weight = 3
+    url = "/experience"
+  [[menu.header]]
+    name = "about"
+    weight = 4
+    url = "/about"
 
 [params]
   user = "eirwin"
