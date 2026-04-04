@@ -1,0 +1,78 @@
+baseURL = 'https://ericirwin.io/'
+languageCode = 'en-us'
+title = 'Eric Irwin'
+
+[module]
+  [[module.imports]]
+    path = "github.com/lordmathis/hugo-theme-nightfall"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[pagination]
+  pagerSize = 10
+
+[menu]
+  [[menu.header]]
+    name = "about"
+    weight = 0
+    url = "/about"
+  [[menu.header]]
+    name = "experience"
+    weight = 1
+    url = "/experience"
+  [[menu.header]]
+    name = "blog"
+    weight = 2
+    url = "/posts"
+  [[menu.header]]
+    name = "featured"
+    weight = 3
+    url = "/featured"
+
+[params]
+  user = "eirwin"
+  hostname = "ericirwin.io"
+  openLinksInNewTab = true
+  showMetadata = true
+  showPublishedDate = true
+  showReadingTime = true
+  showTags = true
+  sitedescription = "Experienced engineer, leader and continuous learner with a passion for Continuous Delivery and all things Delivery Engineering."
+
+  [params.author]
+    name = "Eric Irwin"
+    email = "Eric.Irwin@gmail.com"
+    avatar = "/images/headshot.png"
+
+  [params.styles]
+    color = "blue"
+
+[[params.social]]
+  key = 0
+  name = "github"
+  url = "https://github.com/eirwin"
+  target = "_blank"
+  aria = "GitHub"
+
+[[params.social]]
+  key = 1
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/ericirwin1124/"
+  target = "_blank"
+  aria = "LinkedIn"
+
+[[params.social]]
+  key = 2
+  name = "twitter"
+  url = "https://twitter.com/JediCowboyEric"
+  target = "_blank"
+  aria = "Twitter"
+
+[[params.social]]
+  key = 3
+  name = "email"
+  url = "mailto:Eric.Irwin@gmail.com"
+  aria = "Email"
