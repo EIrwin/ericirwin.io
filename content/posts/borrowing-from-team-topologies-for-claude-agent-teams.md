@@ -1,6 +1,6 @@
 ---
 title: "Borrowing from Team Topologies to Make Sense of Claude Agent Teams"
-date: 2025-06-01
+date: 2026-02-07
 description: "Applying Team Topologies mental models to Claude Code's new agent teams feature — eight configurations for structuring multi-agent work."
 tags: ["ai", "agent-teams", "team-topologies", "claude-code", "engineering-leadership"]
 ---

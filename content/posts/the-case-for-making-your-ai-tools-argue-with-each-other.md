@@ -1,6 +1,6 @@
 ---
 title: "The Case for Making Your AI Tools Argue With Each Other"
-date: 2026-01-25
+date: 2026-01-24
 description: "Instead of trusting a single LLM as the authority, force a second opinion every time — and use the disagreements to find where the real uncertainty lives."
 tags: ["ai", "llm", "claude", "gemini", "engineering", "decision-making"]
 ---
