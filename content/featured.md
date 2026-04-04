@@ -14,6 +14,14 @@ showReadingTime: false
 
 - **[Originated by Spotify, Backstage Sparks a Platform Revolution](https://www.forrester.com/report/originated-by-spotify-backstage-sparks-a-platform-revolution/RES182394)** — Eric's KubeCon talk on how our engineering teams use QM to validate and measure platform impact.
 
+## Projects
+
+- **[Agent Team Topologies](https://eirwin.github.io/agent-team-topologies/)** — Eight composable patterns for structuring multi-agent collaboration in Claude Code, inspired by Team Topologies thinking.
+
+- **[Swoop Golf](https://swoopgolf.com/)** — On-demand food and beverage delivery app that brings service directly to golfers on the course.
+
+- **[Ryzer Labs](https://ryzerlabs.dev/)** — A modular LED system for Bambu Lab 3D printers that displays printer status through color-coded indicators.
+
 ## Podcasts
 
 - **[Moving Fast Tech Podcast: Unlocking the Power of Big Data and AI](https://movingfast.tech/moving-fast-tech-podcast-14-unlocking-the-power-of-big-data-and-ai-with-eric-irwin-senior-director-of-engineering-at-quantum-metric/)** — Chatting about how Quantum Metric uses data analytics and AI to help organizations understand and improve customer experiences.
