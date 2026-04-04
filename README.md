@@ -1,24 +1,23 @@
-# Eric Irwin [![CircleCI](https://circleci.com/gh/EIrwin/ericirwin.io/tree/master.svg?style=svg)](https://circleci.com/gh/EIrwin/ericirwin.io/tree/master)
+# ericirwin.io
 
-## Technologies
-This site is built and hosted using the following:
-- React
-- Node
-- Flow
-- Prettier
-- WebPack
-- Docker
-- Kubernetes
-- Digital Ocean
+Personal website built with [Hugo](https://gohugo.io/) and the [Nightfall](https://github.com/lordmathis/hugo-theme-nightfall) theme. Deployed to [GitHub Pages](https://pages.github.com/) via GitHub Actions.
 
 ## Develop
-To start the development server with hot reloading enabled.
+
+Start the local dev server (requires [Dart Sass](https://sass-lang.com/install/)):
+
 ```bash
-yarn dev
+hugo server -D
 ```
 
-## Running in Docker
-To run local development with Docker.
+Site will be available at http://localhost:1313/.
+
+## Build
+
 ```bash
-docker-compose up
+hugo --minify
 ```
+
+## Deploy
+
+Pushes to `master` automatically build and deploy via the GitHub Actions workflow.
