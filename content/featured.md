@@ -14,6 +14,8 @@ showReadingTime: false
 
 - **[Originated by Spotify, Backstage Sparks a Platform Revolution](https://www.forrester.com/report/originated-by-spotify-backstage-sparks-a-platform-revolution/RES182394)** — Eric's KubeCon talk on how our engineering teams use QM to validate and measure platform impact.
 
+- **[The Most Effective Ways to Onboard New Engineers](https://builtin.com/articles/most-effective-ways-onboard-new-engineers)** — Featured in Built In's guide on engineering onboarding best practices.
+
 ## Projects
 
 - **[Agent Team Topologies](https://eirwin.github.io/agent-team-topologies/)** — Eight composable patterns for structuring multi-agent collaboration in Claude Code, inspired by Team Topologies thinking.
